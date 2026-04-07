@@ -503,6 +503,37 @@ footer{background:var(--charcoal);color:rgba(253,251,248,.45);padding:56px 80px 
   .footer-top{grid-template-columns:1fr}
   .doc-creds{grid-template-columns:repeat(3,1fr)}
 }
+/* ── PREORDER ── */
+#preorder{padding:80px 24px;background:linear-gradient(135deg,var(--sage-dark) 0%,#3a6b40 100%);color:#fff}
+.preorder-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+#preorder .section-label{color:rgba(255,255,255,.75);border-color:rgba(255,255,255,.3)}
+#preorder .section-title{color:#fff}
+#preorder .section-sub{color:rgba(255,255,255,.85);margin-bottom:32px}
+.preorder-info-cards{display:flex;flex-direction:column;gap:16px;margin-bottom:32px}
+.preorder-info-card{display:flex;align-items:flex-start;gap:14px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:16px;padding:18px 20px}
+.preorder-info-icon{font-size:24px;line-height:1;flex-shrink:0;margin-top:2px}
+.preorder-info-title{font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.06em;opacity:.7;margin-bottom:4px}
+.preorder-info-val{font-size:15px;font-weight:500;color:#fff}
+.preorder-free{color:#a8f0b0}
+.preorder-paid{color:rgba(255,255,255,.8);font-size:14px;margin-top:3px}
+.preorder-btns{display:flex;gap:12px;flex-wrap:wrap}
+.preorder-btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:50px;font-size:15px;font-weight:600;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.preorder-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.preorder-btn-wa{background:#25D366;color:#fff}
+.preorder-btn-tg{background:#2AABEE;color:#fff}
+.preorder-right{display:flex;justify-content:center}
+.preorder-visual{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:24px;padding:40px 36px;width:100%;max-width:340px}
+.preorder-phone-icon{font-size:48px;text-align:center;margin-bottom:28px}
+.preorder-steps{display:flex;flex-direction:column;gap:18px}
+.preorder-step{display:flex;align-items:center;gap:14px}
+.preorder-step-num{width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.2);border:2px solid rgba(255,255,255,.5);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;flex-shrink:0}
+.preorder-step-text{font-size:14px;color:rgba(255,255,255,.9);line-height:1.4}
+@media(max-width:768px){
+  .preorder-inner{grid-template-columns:1fr;gap:40px}
+  .preorder-right{display:none}
+  .preorder-btns{flex-direction:column}
+  .preorder-btn{justify-content:center}
+}
 </style>
 </head>
 <body>
@@ -514,6 +545,7 @@ footer{background:var(--charcoal);color:rgba(253,251,248,.45);padding:56px 80px 
     <li><a href="#partners" data-i18n="footer_where">Где купить</a></li>
     <li><a href="#programs" data-i18n="footer_programs">Программы</a></li>
     <li><a href="#consultation" data-i18n="footer_consult">Консультация</a></li>
+    <li><a href="#preorder" data-i18n="preorder_label" style="color:var(--sage-dark);font-weight:600">Онлайн заказы</a></li>
   </ul>
   <div class="nav-right">
     <div class="lang-sw">
@@ -678,6 +710,57 @@ footer{background:var(--charcoal);color:rgba(253,251,248,.45);padding:56px 80px 
       </div>
       <div class="fgroup"><label data-i18n="form_comment">Комментарий (необязательно)</label><textarea placeholder="Расскажите кратко о своей ситуации..."></textarea></div>
       <button class="btn-submit" data-i18n="form_btn" onclick="formSuccess(this)">Отправить заявку</button>
+    </div>
+  </div>
+</section>
+
+<!-- PREORDER -->
+<section id="preorder">
+  <div class="preorder-inner">
+    <div class="preorder-left">
+      <div class="section-label" data-i18n="preorder_label">Онлайн заказы</div>
+      <h2 class="section-title" data-i18n="preorder_title">Предзаказ <em>напрямую</em></h2>
+      <p class="section-sub" data-i18n="preorder_sub">Закажите продукцию Casserole напрямую через WhatsApp или Telegram — быстро, удобно, без посредников.</p>
+
+      <div class="preorder-info-cards">
+        <div class="preorder-info-card">
+          <div class="preorder-info-icon">🕙</div>
+          <div>
+            <div class="preorder-info-title" data-i18n="preorder_schedule_title">График приёма заказов</div>
+            <div class="preorder-info-val" data-i18n="preorder_schedule">Пн–Пт, с 10:00 до 19:00</div>
+          </div>
+        </div>
+        <div class="preorder-info-card">
+          <div class="preorder-info-icon">🚚</div>
+          <div>
+            <div class="preorder-info-title" data-i18n="preorder_delivery_title">Доставка по городу</div>
+            <div class="preorder-info-val preorder-free" data-i18n="preorder_delivery_free">✅ Бесплатно при заказе от 20 000 тг</div>
+            <div class="preorder-info-val preorder-paid" data-i18n="preorder_delivery_paid">📦 2 000 тг при заказе до 20 000 тг</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="preorder-btns">
+        <a href="https://wa.me/87473503439" target="_blank" class="preorder-btn preorder-btn-wa">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span data-i18n="preorder_cta">Написать в WhatsApp</span>
+        </a>
+        <a href="https://t.me/87473503439" target="_blank" class="preorder-btn preorder-btn-tg">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+          <span data-i18n="preorder_cta2">Написать в Telegram</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="preorder-right">
+      <div class="preorder-visual">
+        <div class="preorder-phone-icon">📱</div>
+        <div class="preorder-steps">
+          <div class="preorder-step"><span class="preorder-step-num">1</span><span class="preorder-step-text">Выбери товары из каталога</span></div>
+          <div class="preorder-step"><span class="preorder-step-num">2</span><span class="preorder-step-text">Напиши нам в WhatsApp или Telegram</span></div>
+          <div class="preorder-step"><span class="preorder-step-num">3</span><span class="preorder-step-text">Получи заказ с доставкой</span></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1002,7 +1085,17 @@ var TRANSLATIONS = {
     prog_result: "Результат:",
     prog_products: "Продукты программы",
     prog_cta: "Хотите получить персональную программу от Натальи Ни?",
-    prog_cta_btn: "Записаться на консультацию"
+    prog_cta_btn: "Записаться на консультацию",
+    preorder_label: "Онлайн заказы",
+    preorder_title: "Предзаказ <em>напрямую</em>",
+    preorder_sub: "Закажите продукцию Casserole напрямую через WhatsApp или Telegram — быстро, удобно, без посредников.",
+    preorder_schedule_title: "График приёма заказов",
+    preorder_schedule: "Пн–Пт, с 10:00 до 19:00",
+    preorder_delivery_title: "Доставка по городу",
+    preorder_delivery_free: "Бесплатно при заказе от 20 000 тг",
+    preorder_delivery_paid: "2 000 тг при заказе до 20 000 тг",
+    preorder_cta: "Написать в WhatsApp",
+    preorder_cta2: "Написать в Telegram"
   },
   KZ: {
     nav_catalog: "Каталог",
@@ -1142,7 +1235,17 @@ var TRANSLATIONS = {
     prog_result: "Нәтиже:",
     prog_products: "Бағдарлама өнімдері",
     prog_cta: "Наталья Нидің жеке бағдарламасын алғыңыз келе ме?",
-    prog_cta_btn: "Кеңеске жазылу"
+    prog_cta_btn: "Кеңеске жазылу",
+    preorder_label: "Онлайн тапсырыстар",
+    preorder_title: "Алдын ала <em>тапсырыс</em>",
+    preorder_sub: "Casserole өнімдерін WhatsApp немесе Telegram арқылы тікелей тапсырыс беріңіз — жылдам, ыңғайлы.",
+    preorder_schedule_title: "Тапсырыс қабылдау кестесі",
+    preorder_schedule: "Дс–Жм, 10:00-ден 19:00-ге дейін",
+    preorder_delivery_title: "Қала бойынша жеткізу",
+    preorder_delivery_free: "20 000 тг-дан бастап тапсырыс кезінде тегін",
+    preorder_delivery_paid: "20 000 тг-ға дейінгі тапсырыс кезінде 2 000 тг",
+    preorder_cta: "WhatsApp-қа жазу",
+    preorder_cta2: "Telegram-ға жазу"
   },
   EN: {
     nav_catalog: "Catalog",
@@ -1282,7 +1385,17 @@ var TRANSLATIONS = {
     prog_result: "Results:",
     prog_products: "Program products",
     prog_cta: "Want to get a personal program from Natalya Ni?",
-    prog_cta_btn: "Book a consultation"
+    prog_cta_btn: "Book a consultation",
+    preorder_label: "Online Orders",
+    preorder_title: "Pre-order <em>directly</em>",
+    preorder_sub: "Order Casserole products directly via WhatsApp or Telegram — fast, convenient, no middlemen.",
+    preorder_schedule_title: "Order Schedule",
+    preorder_schedule: "Mon–Fri, 10:00–19:00",
+    preorder_delivery_title: "City Delivery",
+    preorder_delivery_free: "Free for orders from 20,000 KZT",
+    preorder_delivery_paid: "2,000 KZT for orders under 20,000 KZT",
+    preorder_cta: "Write on WhatsApp",
+    preorder_cta2: "Write on Telegram"
   }
 };
 
@@ -1527,7 +1640,7 @@ const PROGRAMS = [
 ];
 
 const ICONS = {
-  "Завтраки":"🌅","Супы":"🍲","Фаст-фуд":"🥙","Боулы":"🥗","Пицца":"🍕","Десерты":"🧁","Продукция":"🏪"
+  "Завтраки":"🌅","Супы":"🍲","Фаст-фуд":"🥙","Боулы":"🥗","Пицца":"🍕","Десерты":"🧁","Продукция":"🏪","Пакеты":"🎁"
 };
 
 const PRODUCTS = [
@@ -1573,6 +1686,16 @@ const PRODUCTS = [
   {cat:"Продукция",cat_kz:"Өнімдер",cat_en:"Products",name:"Сырники на рикотте без глютена 150 гр",desc:"Нежные сырники без глютена. Обжарить на масле гхи",price:"3 000",photo:"https://static.tildacdn.com/stor3666-6430-4366-a331-333637343231/48456490.jpg",kbju:{},weight:"150 гр",ing:"творог фермерский, рикотта, яйцо куриное, мука кокосовая",tags:["Без глютена","Без сахара"],name_kz:"Рикоттадағы глютенсіз сырники 150 гр",name_en:"Gluten-Free Ricotta Cheesecakes 150g",desc_kz:"Глютенсіз нәзік сырники. Гхи майында қуырыңыз. Қантсыз және ұнсыз",desc_en:"Tender gluten-free cheesecakes. Fry in ghee butter. No sugar or flour"},
   {cat:"Продукция",cat_kz:"Өнімдер",cat_en:"Products",name:"Булочки чечевичные 190 гр",desc:"Сытные булочки без муки и яиц для безглютеновых бургеров",price:"2 750",photo:"https://static.tildacdn.com/stor3865-3361-4235-a337-346230623164/78355837.jpg",kbju:{cal:"277",p:"13",f:"11",c:"34"},weight:"190 гр",ing:"чечевица красная, псилиум, мякоть яблока",tags:["Веган","Без глютена"],name_kz:"Жасымық бөлкелері 190 гр",name_en:"Lentil Buns 190g",desc_kz:"Энергия мен ішекті қолдау үшін өсімдік белогы мен талшық",desc_en:"Plant protein and fiber for energy and gut support"},
   {cat:"Продукция",cat_kz:"Өнімдер",cat_en:"Products",name:"Десерт Медовик 120 гр",desc:"Нежный медовик без глютена и рафинированного сахара",price:"2 990",photo:"https://static.tildacdn.com/stor3566-3838-4763-b235-353539376662/8d202beaa9e3dda3dd1e9538b72185af.jpg",kbju:{cal:"312",p:"2.7",f:"23",c:"24"},weight:"120 гр",ing:"",tags:["Без глютена","Без рафинированного сахара"],name_kz:"Медовик десерті 120 гр",name_en:"Honey Cake Dessert 120g",desc_kz:"Жұмсақ текстура мен теңдестірілген тәттілігімен жеңіл десерт",desc_en:"Light dessert with soft texture and balanced sweetness"}
+,
+  {cat:"Продукция",cat_kz:"Өнімдер",cat_en:"Products",name:"Соус медово-имбирный",desc:"Заправка из мёда, имбиря и оливкового масла extra virgin",price:"990",photo:"https://static.tildacdn.com/stor6239-6336-4238-b236-396237633164/51933282.jpg",kbju:{cal:"547",p:"0.3",f:"55.8",c:"14"},weight:"",ing:"имбирь, оливковое масло extra virgin, мёд",tags:["Без глютена","Без сахара"],name_kz:"Бал-зімбір соусы",name_en:"Honey-Ginger Sauce",desc_kz:"Бал, зімбір және оливка майынан жасалған салат шырыны",desc_en:"Dressing made from honey, ginger and extra virgin olive oil"},
+  {cat:"Продукция",cat_kz:"Өнімдер",cat_en:"Products",name:"Соус цезарь",desc:"Нежная заправка из козьей брынзы, кокосового йогурта и чеснока",price:"990",photo:"https://static.tildacdn.com/stor6666-6361-4334-b732-393363333465/90895575.jpg",kbju:{cal:"259",p:"10.6",f:"22.1",c:"4.9"},weight:"",ing:"брынза козья, кокосовый йогурт, чеснок",tags:["Без глютена"],name_kz:"Цезарь соусы",name_en:"Caesar Sauce",desc_kz:"Ешкі ірімшігі, кокос йогурты және сарымсақтан жасалған нәзік шырын",desc_en:"Tender dressing from goat cheese, coconut yogurt and garlic"},
+  {cat:"Продукция",cat_kz:"Өнімдер",cat_en:"Products",name:"Соус гранатовый",desc:"Ароматная заправка из гранатового сока, оливкового масла и инжира",price:"990",photo:"https://static.tildacdn.com/stor3466-3566-4635-b466-313036313338/50435585.jpg",kbju:{cal:"243",p:"0.5",f:"22.7",c:"11"},weight:"",ing:"сок граната, оливковое масло extra virgin, инжир",tags:["Веган","Без глютена"],name_kz:"Нар соусы",name_en:"Pomegranate Sauce",desc_kz:"Нар шырыны, зәйтүн майы және інжірден жасалған хош иісті шырын",desc_en:"Aromatic dressing from pomegranate juice, olive oil and figs"},
+  {cat:"Продукция",cat_kz:"Өнімдер",cat_en:"Products",name:"Соус кетчуп casserole",desc:"Пикантный соус из вяленых помидоров, гранатового сока и оливкового масла",price:"1 090",photo:"https://static.tildacdn.com/stor3339-6463-4631-a236-643039326363/79646498.jpg",kbju:{cal:"303",p:"2.1",f:"28.3",c:"12"},weight:"",ing:"оливковое масло extra virgin, вяленые помидоры, сок гранатовый",tags:["Веган","Без глютена"],name_kz:"Casserole кетчуп соусы",name_en:"Casserole Ketchup Sauce",desc_kz:"Кептірілген қызанақ, нар шырыны және зәйтүн майынан жасалған дәмді соус",desc_en:"Savory sauce from sun-dried tomatoes, pomegranate juice and olive oil"},
+  {cat:"Продукция",cat_kz:"Өнімдер",cat_en:"Products",name:"Бельгийские вафли из цветной капусты со шпинатом",desc:"Нежные вафли без глютена и лактозы — полезный перекус или завтрак",price:"3 100",photo:"https://static.tildacdn.com/tild3035-6131-4133-b130-376164373834/P1162008_1.jpg",kbju:{},weight:"",ing:"капуста цветная, шпинат, псилиум, мука рисовая, яйцо куриное, соль гималайская, молоко кокосовое",tags:["Без глютена","Без лактозы"],name_kz:"Шпинатты бельгиялық вафли",name_en:"Belgian Cauliflower & Spinach Waffles",desc_kz:"Глютенсіз және лактозасыз нәзік вафли — пайдалы таңғы ас немесе тіскебасар",desc_en:"Tender gluten-free, lactose-free waffles — a healthy snack or breakfast"},
+  {cat:"Пакеты",cat_kz:"Пакеттер",cat_en:"Packages",name:"Пакет «Забота о маме»",desc:"Готовый рацион для восстановления после родов — сбалансированное питание каждый день",price:"52 530",photo:"https://static.tildacdn.com/stor6236-3132-4937-a165-356331356439/13514634.jpg",kbju:{},weight:"",ing:"",tags:["Без глютена","Без сахара"],name_kz:"«Анаға қамқорлық» пакеті",name_en:"Mom Care Package",desc_kz:"Босанғаннан кейін қалпына келтіруге арналған дайын рацион",desc_en:"Ready meal plan for postpartum recovery"},
+  {cat:"Пакеты",cat_kz:"Пакеттер",cat_en:"Packages",name:"«Белок на весь день» рацион",desc:"Рацион для энергии и лёгкости с высоким содержанием белка",price:"63 270",photo:"https://static.tildacdn.com/stor3562-3335-4731-b834-376564636434/85970737.jpg",kbju:{},weight:"",ing:"",tags:["Без глютена","Без сахара"],name_kz:"«Күні бойы нәруыз» рационы",name_en:"\"Protein All Day\" Meal Plan",desc_kz:"Энергия мен жеңілдік үшін нәруызға бай рацион",desc_en:"High-protein meal plan for energy and lightness"},
+  {cat:"Пакеты",cat_kz:"Пакеттер",cat_en:"Packages",name:"Пакет «Лучшее утро»",desc:"Идеальный баланс белков, жиров и медленных углеводов для бодрого начала дня",price:"57 900",photo:"https://static.tildacdn.com/stor3139-6432-4261-b532-643564343563/59286093.jpg",kbju:{},weight:"",ing:"",tags:["Без глютена","Без сахара"],name_kz:"«Ең жақсы таң» пакеті",name_en:"\"Best Morning\" Package",desc_kz:"Күнді белсенді бастау үшін белоктар мен жайлы көмірсулардың тамаша теңгерімі",desc_en:"Perfect balance of proteins and slow carbs for an energetic start to the day"},
+  {cat:"Пакеты",cat_kz:"Пакеттер",cat_en:"Packages",name:"Пакет «Кето рацион»",desc:"Рацион на основе качественных жиров и белка — для стабильной энергии без скачков сахара",price:"48 240",photo:"https://static.tildacdn.com/stor3665-3866-4466-b264-343465613532/15449882.jpg",kbju:{},weight:"",ing:"",tags:["Без глютена","Без сахара","Кето"],name_kz:"«Кето рацион» пакеті",name_en:"Keto Meal Plan Package",desc_kz:"Сапалы майлар мен белокқа негізделген рацион — қант секірусіз тұрақты энергия",desc_en:"Quality fat and protein meal plan — stable energy without sugar spikes"}
 ,
   
 ];
