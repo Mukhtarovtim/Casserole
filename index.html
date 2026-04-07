@@ -756,9 +756,9 @@ footer{background:var(--charcoal);color:rgba(253,251,248,.45);padding:56px 80px 
       <div class="preorder-visual">
         <div class="preorder-phone-icon">📱</div>
         <div class="preorder-steps">
-          <div class="preorder-step"><span class="preorder-step-num">1</span><span class="preorder-step-text">Выбери товары из каталога</span></div>
-          <div class="preorder-step"><span class="preorder-step-num">2</span><span class="preorder-step-text">Напиши нам в WhatsApp или Telegram</span></div>
-          <div class="preorder-step"><span class="preorder-step-num">3</span><span class="preorder-step-text">Получи заказ с доставкой</span></div>
+          <div class="preorder-step"><span class="preorder-step-num">1</span><span class="preorder-step-text" data-i18n="preorder_step1">Выбери товары из каталога</span></div>
+          <div class="preorder-step"><span class="preorder-step-num">2</span><span class="preorder-step-text" data-i18n="preorder_step2">Напиши нам в WhatsApp или Telegram</span></div>
+          <div class="preorder-step"><span class="preorder-step-num">3</span><span class="preorder-step-text" data-i18n="preorder_step3">Получи заказ с доставкой</span></div>
         </div>
       </div>
     </div>
@@ -1095,7 +1095,10 @@ var TRANSLATIONS = {
     preorder_delivery_free: "Бесплатно при заказе от 20 000 тг",
     preorder_delivery_paid: "2 000 тг при заказе до 20 000 тг",
     preorder_cta: "Написать в WhatsApp",
-    preorder_cta2: "Написать в Telegram"
+    preorder_cta2: "Написать в Telegram",
+    preorder_step1: "Выбери товары из каталога",
+    preorder_step2: "Напиши нам в WhatsApp или Telegram",
+    preorder_step3: "Получи заказ с доставкой"
   },
   KZ: {
     nav_catalog: "Каталог",
@@ -1245,7 +1248,10 @@ var TRANSLATIONS = {
     preorder_delivery_free: "20 000 тг-дан бастап тапсырыс кезінде тегін",
     preorder_delivery_paid: "20 000 тг-ға дейінгі тапсырыс кезінде 2 000 тг",
     preorder_cta: "WhatsApp-қа жазу",
-    preorder_cta2: "Telegram-ға жазу"
+    preorder_cta2: "Telegram-ға жазу",
+    preorder_step1: "Каталогтан тауарларды таңдаңыз",
+    preorder_step2: "WhatsApp немесе Telegram арқылы жазыңыз",
+    preorder_step3: "Жеткізумен тапсырысты алыңыз"
   },
   EN: {
     nav_catalog: "Catalog",
@@ -1395,7 +1401,10 @@ var TRANSLATIONS = {
     preorder_delivery_free: "Free for orders from 20,000 KZT",
     preorder_delivery_paid: "2,000 KZT for orders under 20,000 KZT",
     preorder_cta: "Write on WhatsApp",
-    preorder_cta2: "Write on Telegram"
+    preorder_cta2: "Write on Telegram",
+    preorder_step1: "Choose products from the catalog",
+    preorder_step2: "Message us on WhatsApp or Telegram",
+    preorder_step3: "Receive your order with delivery"
   }
 };
 
@@ -1422,6 +1431,8 @@ function switchLang(lang) {
     if (val === undefined) return;
     if (el.tagName === "OPTION" || el.tagName === "SELECT") {
       el.textContent = val;
+    } else if (/<[a-z]/i.test(val)) {
+      el.innerHTML = val;
     } else {
       el.textContent = val;
     }
