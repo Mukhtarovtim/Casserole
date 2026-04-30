@@ -498,6 +498,15 @@ footer{background:var(--charcoal);color:rgba(253,251,248,.45);padding:56px 80px 
 .cert-badges { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:6px; }
 .cert-badges-modal { display:flex; gap:8px; flex-wrap:wrap; margin:8px 0; }
 
+
+@media(max-width:960px){
+  #problem,#tech{padding:52px 18px}
+  #problem > div{grid-template-columns:1fr !important;gap:32px !important}
+  #tech{padding:48px 18px !important}
+  #tech > div > div:last-child > div,
+  #tech [style*="grid-template-columns:repeat(3"]{grid-template-columns:1fr !important}
+}
+
 </style>
 </head>
 <body>
@@ -573,6 +582,40 @@ footer{background:var(--charcoal);color:rgba(253,251,248,.45);padding:56px 80px 
 </section>
 
 <!-- ABOUT -->
+
+<!-- PROBLEM BLOCK -->
+<section id="problem" style="background:var(--cream)">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center">
+    <div>
+      <div class="section-label" data-i18n="problem_label">Проблема рынка</div>
+      <h2 class="section-title" style="margin-bottom:24px" data-i18n="problem_title">Современный<br>потребитель вынужден<br>выбирать между <em>здоровьем<br>и удобством</em></h2>
+      <p style="font-size:15px;color:var(--mid);line-height:1.8;max-width:480px" data-i18n="problem_sub">Запрос на функциональное питание, здоровье кишечника и долголетие стремительно растёт — но рынок не успевает за ним.</p>
+    </div>
+    <div style="display:grid;gap:16px">
+      <div style="background:var(--warm-white);border-radius:18px;padding:24px 28px;border:1px solid var(--light);display:flex;gap:16px;align-items:flex-start">
+        <span style="font-size:28px;flex-shrink:0">🥗</span>
+        <div>
+          <div style="font-weight:500;margin-bottom:6px;font-size:15px" data-i18n="problem_p1_title">Здоровая еда неудобна</div>
+          <div style="font-size:13px;color:var(--mid);line-height:1.7" data-i18n="problem_p1_desc">Приготовление полезной еды требует времени, знаний и постоянных усилий</div>
+        </div>
+      </div>
+      <div style="background:var(--warm-white);border-radius:18px;padding:24px 28px;border:1px solid var(--light);display:flex;gap:16px;align-items:flex-start">
+        <span style="font-size:28px;flex-shrink:0">🏭</span>
+        <div>
+          <div style="font-weight:500;margin-bottom:6px;font-size:15px" data-i18n="problem_p2_title">Удобная еда вредит здоровью</div>
+          <div style="font-size:13px;color:var(--mid);line-height:1.7" data-i18n="problem_p2_desc">Масс-маркет продукты содержат глютен, трансжиры, консерванты и рафинированный сахар</div>
+        </div>
+      </div>
+      <div style="background:var(--sage-dark);border-radius:18px;padding:24px 28px;display:flex;gap:16px;align-items:flex-start">
+        <span style="font-size:28px;flex-shrink:0">✅</span>
+        <div>
+          <div style="font-weight:500;margin-bottom:6px;font-size:15px;color:#fff" data-i18n="problem_sol_title">Casserole — решение</div>
+          <div style="font-size:13px;color:rgba(255,255,255,.75);line-height:1.7" data-i18n="problem_sol_desc">Здоровье + удобство + доверие. Продукты врача, которые вписываются в современный ритм жизни</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <section id="about">
   <div class="section-label">О компании</div>
   <h2 class="section-title">Casserole — <em>первопроходцы</em><br>здорового питания в Казахстане</h2>
@@ -608,6 +651,48 @@ footer{background:var(--charcoal);color:rgba(253,251,248,.45);padding:56px 80px 
 </section>
 
 <!-- CATALOG -->
+<!-- TECH BLOCK -->
+<section id="tech" style="background:var(--warm-white);border-top:1px solid var(--light)">
+  <div>
+    <div style="text-align:center;margin-bottom:48px">
+      <div class="section-label" data-i18n="tech_label">Технологии производства</div>
+      <h2 class="section-title" data-i18n="tech_title">Чистые ингредиенты.<br><em>Передовые технологии.</em></h2>
+      <p style="font-size:15px;color:var(--mid);max-width:560px;margin:16px auto 0;line-height:1.8" data-i18n="tech_sub">Мы создаём готовые блюда, которые сочетают чистый состав, передовые технологии и длительный срок хранения без потери пищевой ценности</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1200px;margin:0 auto">
+      <div style="background:var(--cream);border-radius:20px;padding:32px 28px;text-align:center">
+        <div style="font-size:40px;margin-bottom:16px">🧊</div>
+        <div style="font-weight:600;font-size:15px;margin-bottom:10px" data-i18n="tech_f1_title">Шоковая заморозка</div>
+        <div style="font-size:13px;color:var(--mid);line-height:1.8" data-i18n="tech_f1_desc">Мгновенное замораживание сохраняет текстуру, вкус и максимум питательных веществ без консервантов</div>
+      </div>
+      <div style="background:var(--cream);border-radius:20px;padding:32px 28px;text-align:center">
+        <div style="font-size:40px;margin-bottom:16px">🌿</div>
+        <div style="font-weight:600;font-size:15px;margin-bottom:10px" data-i18n="tech_f2_title">Чистый состав</div>
+        <div style="font-size:13px;color:var(--mid);line-height:1.8" data-i18n="tech_f2_desc">Только натуральные ингредиенты. Без глютена, лактозы, трансжиров, консервантов и красителей</div>
+      </div>
+      <div style="background:var(--cream);border-radius:20px;padding:32px 28px;text-align:center">
+        <div style="font-size:40px;margin-bottom:16px">🔬</div>
+        <div style="font-weight:600;font-size:15px;margin-bottom:10px" data-i18n="tech_f3_title">Разработка врача</div>
+        <div style="font-size:13px;color:var(--mid);line-height:1.8" data-i18n="tech_f3_desc">Каждый рецепт создан гастроэнтерологом с 25-летним опытом клинической практики</div>
+      </div>
+      <div style="background:var(--cream);border-radius:20px;padding:32px 28px;text-align:center">
+        <div style="font-size:40px;margin-bottom:16px">⏱️</div>
+        <div style="font-weight:600;font-size:15px;margin-bottom:10px" data-i18n="tech_f4_title">Долгий срок хранения</div>
+        <div style="font-size:13px;color:var(--mid);line-height:1.8" data-i18n="tech_f4_desc">До 90 дней при заморозке без потери питательной ценности — удобство без компромиссов</div>
+      </div>
+      <div style="background:var(--cream);border-radius:20px;padding:32px 28px;text-align:center">
+        <div style="font-size:40px;margin-bottom:16px">🏭</div>
+        <div style="font-weight:600;font-size:15px;margin-bottom:10px" data-i18n="tech_f5_title">Собственное производство</div>
+        <div style="font-size:13px;color:var(--mid);line-height:1.8" data-i18n="tech_f5_desc">Полный контроль качества на каждом этапе — от рецептуры до упаковки</div>
+      </div>
+      <div style="background:var(--sage-dark);border-radius:20px;padding:32px 28px;text-align:center">
+        <div style="font-size:40px;margin-bottom:16px">💚</div>
+        <div style="font-weight:600;font-size:15px;margin-bottom:10px;color:#fff" data-i18n="tech_f6_title">100+ оригинальных рецептов</div>
+        <div style="font-size:13px;color:rgba(255,255,255,.75);line-height:1.8" data-i18n="tech_f6_desc">Разработаны на основе реальных потребностей пациентов и клинической практики</div>
+      </div>
+    </div>
+  </div>
+</section>
 <section id="catalog">
   <div class="cat-header">
     <div>
@@ -1000,7 +1085,31 @@ var TRANSLATIONS = {
     prog_cta_btn: "Записаться на консультацию"
   ,
     cert_eac: "Сертификат EAC",
-    cert_halal: "Сертификат Халал"},
+    cert_halal: "Сертификат Халал",
+    problem_label: "Проблема рынка",
+    problem_title: "Современный потребитель вынужден выбирать между <em>здоровьем и удобством</em>",
+    problem_sub: "Запрос на функциональное питание, здоровье кишечника и долголетие стремительно растёт — но рынок не успевает за ним.",
+    problem_p1_title: "Здоровая еда неудобна",
+    problem_p1_desc: "Приготовление полезной еды требует времени, знаний и постоянных усилий",
+    problem_p2_title: "Удобная еда вредит здоровью",
+    problem_p2_desc: "Масс-маркет продукты содержат глютен, трансжиры, консерванты и рафинированный сахар",
+    problem_sol_title: "Casserole — решение",
+    problem_sol_desc: "Здоровье + удобство + доверие. Продукты врача, которые вписываются в современный ритм жизни",
+    tech_label: "Технологии производства",
+    tech_title: "Чистые ингредиенты.<br><em>Передовые технологии.</em>",
+    tech_sub: "Мы создаём готовые блюда, которые сочетают чистый состав, передовые технологии и длительный срок хранения без потери пищевой ценности",
+    tech_f1_title: "Шоковая заморозка",
+    tech_f1_desc: "Мгновенное замораживание сохраняет текстуру, вкус и максимум питательных веществ без консервантов",
+    tech_f2_title: "Чистый состав",
+    tech_f2_desc: "Только натуральные ингредиенты. Без глютена, лактозы, трансжиров, консервантов и красителей",
+    tech_f3_title: "Разработка врача",
+    tech_f3_desc: "Каждый рецепт создан гастроэнтерологом с 25-летним опытом клинической практики",
+    tech_f4_title: "Долгий срок хранения",
+    tech_f4_desc: "До 90 дней при заморозке без потери питательной ценности — удобство без компромиссов",
+    tech_f5_title: "Собственное производство",
+    tech_f5_desc: "Полный контроль качества на каждом этапе — от рецептуры до упаковки",
+    tech_f6_title: "100+ оригинальных рецептов",
+    tech_f6_desc: "Разработаны на основе реальных потребностей пациентов и клинической практики"},
   KZ: {
     nav_catalog: "Каталог",
     nav_where: "Қайдан сатып алуға",
@@ -1142,7 +1251,31 @@ var TRANSLATIONS = {
     prog_cta_btn: "Кеңеске жазылу"
   ,
     cert_eac: "EAC сертификаты",
-    cert_halal: "Халал сертификаты"},
+    cert_halal: "Халал сертификаты",
+    problem_label: "Нарық мәселесі",
+    problem_title: "Заманауи тұтынушы <em>денсаулық пен ыңғайлылық</em> арасында таңдауға мәжбүр",
+    problem_sub: "Функционалды тамақтануға, ішек денсаулығына және ұзақ өмірге деген сұраныс тез өсуде.",
+    problem_p1_title: "Пайдалы тамақ ыңғайсыз",
+    problem_p1_desc: "Пайдалы тамақ дайындау уақыт, білім және үздіксіз күш жұмсауды талап етеді",
+    problem_p2_title: "Ыңғайлы тамақ денсаулыққа зиянды",
+    problem_p2_desc: "Масс-маркет өнімдерінде глютен, трансмайлар, консерванттар бар",
+    problem_sol_title: "Casserole — шешім",
+    problem_sol_desc: "Денсаулық + ыңғайлылық + сенім. Заманауи өмір ритміне сәйкес дәрігер өнімдері",
+    tech_label: "Өндіріс технологиялары",
+    tech_title: "Таза ингредиенттер.<br><em>Заманауи технологиялар.</em>",
+    tech_sub: "Біз таза құрамды, заманауи технологиялар мен тамақтық құндылықты жоғалтпаған ұзақ мерзімді дайын тағамдар жасаймыз",
+    tech_f1_title: "Тез мұздату",
+    tech_f1_desc: "Лездік мұздату консерванттарсыз текстура, дәм және пайдалы заттарды сақтайды",
+    tech_f2_title: "Таза құрам",
+    tech_f2_desc: "Тек табиғи ингредиенттер. Глютенсіз, лактозасыз, трансмайсыз",
+    tech_f3_title: "Дәрігер рецепті",
+    tech_f3_desc: "Әр рецепт 25 жылдық тәжірибесі бар гастроэнтеролог дайындаған",
+    tech_f4_title: "Ұзақ сақтау мерзімі",
+    tech_f4_desc: "Мұздатқанда 90 күнге дейін тамақтық құндылықты жоғалтпайды",
+    tech_f5_title: "Жеке өндіріс",
+    tech_f5_desc: "Рецептурадан бастап қаптамаға дейін сапаны толық бақылау",
+    tech_f6_title: "100+ бастапқы рецепт",
+    tech_f6_desc: "Науқастардың нақты қажеттіліктері мен клиникалық тәжірибе негізінде жасалған"},
   EN: {
     nav_catalog: "Catalog",
     nav_where: "Where to Buy",
@@ -1284,7 +1417,31 @@ var TRANSLATIONS = {
     prog_cta_btn: "Book a consultation"
   ,
     cert_eac: "EAC Certificate",
-    cert_halal: "Halal Certificate"}
+    cert_halal: "Halal Certificate",
+    problem_label: "Market Problem",
+    problem_title: "Modern consumers are forced to choose between <em>health and convenience</em>",
+    problem_sub: "Demand for functional nutrition, gut health, and longevity is rapidly growing — but the market lags behind.",
+    problem_p1_title: "Healthy food is inconvenient",
+    problem_p1_desc: "Preparing nutritious food requires time, knowledge and constant effort",
+    problem_p2_title: "Convenient food is unhealthy",
+    problem_p2_desc: "Mass-market products contain gluten, trans fats, preservatives and refined sugar",
+    problem_sol_title: "Casserole is the solution",
+    problem_sol_desc: "Health + Convenience + Trust. Doctor-made products that fit the modern lifestyle",
+    tech_label: "Production Technology",
+    tech_title: "Clean ingredients.<br><em>Advanced technologies.</em>",
+    tech_sub: "We create ready-to-eat products that combine clean ingredients, advanced production technologies and long shelf life without loss of nutritional value",
+    tech_f1_title: "Shock Freezing",
+    tech_f1_desc: "Instant freezing preserves texture, taste and maximum nutrients without preservatives",
+    tech_f2_title: "Clean Label",
+    tech_f2_desc: "Only natural ingredients. Gluten-free, lactose-free, no trans fats or preservatives",
+    tech_f3_title: "Doctor-Developed",
+    tech_f3_desc: "Every recipe crafted by a gastroenterologist with 25+ years of clinical practice",
+    tech_f4_title: "Long Shelf Life",
+    tech_f4_desc: "Up to 90 days frozen without losing nutritional value — convenience without compromise",
+    tech_f5_title: "Own Production Facility",
+    tech_f5_desc: "Full quality control at every stage — from recipe development to packaging",
+    tech_f6_title: "100+ Original Recipes",
+    tech_f6_desc: "Developed based on real patient needs and clinical practice"}
 };
 
 function switchLang(lang) {
@@ -1310,6 +1467,8 @@ function switchLang(lang) {
     if (val === undefined) return;
     if (el.tagName === "OPTION" || el.tagName === "SELECT") {
       el.textContent = val;
+    } else if (val.indexOf("<") !== -1) {
+      el.innerHTML = val;
     } else {
       el.textContent = val;
     }
@@ -1523,7 +1682,7 @@ const PROGRAMS = [
    results_en:["Normalized digestion","Improved skin condition","Reduced inflammation","Increased energy"]}
 ];
 
-const ICONS = {"Супы":"🍲","Фаст-фуд":"🥙","Гарниры":"🥗","Десерты":"🧁","Продукция":"📦","Ферментированная продукция":"🥬","Мясная продукция":"🥩"};
+const ICONS = {"Супы":"🍲","Фаст-фуд":"🥙","Гарниры":"🥗","Десерты":"🧁","Продукция":"📦","Ферментированная продукция":"🥬","Мясная продукция":"🥩","Намазки":"🧈"};
 
 const PRODUCTS = [
   {cat:"Фаст-фуд",cat_kz:"Фастфуд",cat_en:"Fast Food",name:"Кето пицца Маргарита 335 г",desc:"Сбалансированное блюдо без глютена и быстрых углеводов.",price:"4 600",photo:"https://static.tildacdn.com/stor3839-3166-4835-a164-396236663636/81088949.jpg",photos:["https://static.tildacdn.com/stor3839-3166-4835-a164-396236663636/81088949.jpg"],kbju:{cal:"185",p:"9.5",f:"12.5",c:"6.5"},weight:"335 г",ing:"цветная капуста, миндаль, яйцо, масло Гхи, помидоры черри, сыр моцарелла, рикотта, сулугуни",tags:["Без глютена","Кето"],name_en:"Keto Pizza Margherita 335g",desc_en:"Balanced dish without gluten and fast carbs."},
@@ -1557,7 +1716,85 @@ const PRODUCTS = [
   {cat:"Десерты",cat_kz:"Десерттер",cat_en:"Desserts",name:"Десерт Медовик без глютена и рафинированного сахара 120 г",desc:"Лёгкий десерт с мягкой текстурой и сбалансированной сладостью",price:"2 990",photo:"https://static.tildacdn.com/stor3566-3838-4763-b235-353539376662/8d202beaa9e3dda3dd1e9538b72185af.jpg",photos:["https://static.tildacdn.com/stor3566-3838-4763-b235-353539376662/8d202beaa9e3dda3dd1e9538b72185af.jpg","https://static.tildacdn.com/stor3334-3633-4437-b761-333438613261/e70808f033ad46779dbfb9731bcf89c5.jpg"],kbju:{cal:"370",p:"6",f:"22",c:"36"},weight:"120 г",ing:"мука рисовая,кокосовые сливки, яйцо куриное, сахар кокосовый, мед, сироп топинамбура, разрыхлитель, масло сливочное",tags:["Без глютена"],name_en:"Honey Cake Dessert GF 120g",desc_en:"Light dessert with soft texture and balanced sweetness."},
   {cat:"Фаст-фуд",cat_kz:"Фастфуд",cat_en:"Fast Food",name:"Булочки рисовые без глютена 140 г",desc:"Лёгкая безглютеновая основа с нежной текстурой.",price:"2 300",photo:"https://static.tildacdn.com/stor3038-6438-4335-b464-303932653836/fa7ab53c09fda82616d32a6485f91fb4.webp",photos:["https://static.tildacdn.com/stor3038-6438-4335-b464-303932653836/fa7ab53c09fda82616d32a6485f91fb4.webp","https://static.tildacdn.com/stor3534-3830-4238-b230-646238616361/6aa0d7848abf5c20cb6359bc0ade322e.webp"],kbju:{cal:"248",p:"5.6",f:"16",c:"20"},weight:"140 г",ing:"рисовая мука, яйцо куриное, масло сливочное, молоко кокосовое",tags:["Без глютена","Без лактозы"],name_en:"Gluten-Free Rice Buns 140g",desc_en:"Light gluten-free base with tender texture. Perfect for burgers."},
   {cat:"Гарниры",cat_kz:"Гарнирлер",cat_en:"Sides",name:"Бурый рис с овощами на масле гхи 240 г",desc:"Наши крупы не содержат глютен, готовятся на пару с добавлением овощей и масло гхи. Может использована как гарнир или как добавка к костному бульону.Без лактозы, без глютена, vegeterian.Разогрей и съешь, 100 % natural",price:"2 600",photo:"https://static.tildacdn.com/stor3639-6361-4930-a333-333965316534/ebd081c50b7fc1557f0b6f2e008a92c9.webp",photos:["https://static.tildacdn.com/stor3639-6361-4930-a333-333965316534/ebd081c50b7fc1557f0b6f2e008a92c9.webp"],kbju:{cal:"145",p:"2.8",f:"6.5",c:"19"},weight:"240 г",ing:"бурый рис,киноа, кабачки,морковь,лук, брокколи, масло гхи",tags:["Без глютена","Без лактозы"],name_en:"Brown Rice with Vegetables in Ghee 240g",desc_en:"Gluten-free grain steamed with vegetables and ghee. Ready to heat and eat."}
-];
+,
+  {cat:"Намазки",cat_kz:"Жағындылар",cat_en:"Spreads",
+   name:"Масло Casserole гхи 140 гр",
+   name_kz:"Casserole гхи майы 140 гр",
+   name_en:"Casserole Ghee Butter 140g",
+   desc:"Целебное масло гхи получают путём длительного томления более 6 часов. Удалены лактоза, казеин и примеси — безопасно при лактозной непереносимости.",
+   desc_kz:"Дәрілік гхи майы 6 сағаттан астам бапталады. Лактоза, казеин және қоспалар алынып тасталған.",
+   desc_en:"Healing ghee butter made by slow-simmering for 6+ hours. Lactose, casein and impurities removed — safe for lactose intolerance.",
+   price:"2 700",
+   photo:"https://static.tildacdn.com/stor3165-3064-4865-a136-316661623431/86966538.jpg",
+   kbju:{cal:"900",p:"0",f:"99",c:"0"},
+   weight:"140 гр",
+   ing:"масло сливочное (100%)",
+   tags:["Без лактозы","Без глютена","Кето"]},
+  {cat:"Намазки",cat_kz:"Жағындылар",cat_en:"Spreads",
+   name:"Масло Casserole гхи 280 гр",
+   name_kz:"Casserole гхи майы 280 гр",
+   name_en:"Casserole Ghee Butter 280g",
+   desc:"Целебное масло гхи получают путём длительного томления более 6 часов. Удалены лактоза, казеин и примеси — безопасно при лактозной непереносимости.",
+   desc_kz:"Дәрілік гхи майы 6 сағаттан астам бапталады. Лактоза, казеин және қоспалар алынып тасталған.",
+   desc_en:"Healing ghee butter made by slow-simmering for 6+ hours. Lactose, casein and impurities removed — safe for lactose intolerance.",
+   price:"4 900",
+   photo:"https://static.tildacdn.com/stor3662-3830-4334-b963-663461323766/54853303.jpg",
+   kbju:{cal:"900",p:"0",f:"99",c:"0"},
+   weight:"280 гр",
+   ing:"масло сливочное (100%)",
+   tags:["Без лактозы","Без глютена","Кето"]},
+  {cat:"Намазки",cat_kz:"Жағындылар",cat_en:"Spreads",
+   name:"Масло Casserole авокадо 80 гр",
+   name_kz:"Casserole авокадо майы 80 гр",
+   name_en:"Casserole Avocado Butter 80g",
+   desc:"Сочетание авокадо и масла гхи с лаймом и петрушкой. Богато полиненасыщенными жирами и природными антиоксидантами.",
+   desc_kz:"Авокадо мен гхи майының лайм мен петрушка қосылған үйлесімі. Полиқанықпаған майлар мен антиоксиданттарға бай.",
+   desc_en:"Blend of avocado and ghee with lime and parsley. Rich in polyunsaturated fats and natural antioxidants.",
+   price:"2 900",
+   photo:"https://static.tildacdn.com/stor6465-6535-4633-b634-653762343532/26592004.jpg",
+   kbju:{cal:"418",p:"1",f:"43",c:"3"},
+   weight:"80 гр",
+   ing:"авокадо, масло гхи, лайм, петрушка, соль гималайская",
+   tags:["Без лактозы","Без глютена","Кето","Веган"]},
+  {cat:"Намазки",cat_kz:"Жағындылар",cat_en:"Spreads",
+   name:"Масло Casserole авокадо 160 гр",
+   name_kz:"Casserole авокадо майы 160 гр",
+   name_en:"Casserole Avocado Butter 160g",
+   desc:"Сочетание авокадо и масла гхи с лаймом и петрушкой. Богато полиненасыщенными жирами и природными антиоксидантами.",
+   desc_kz:"Авокадо мен гхи майының лайм мен петрушка қосылған үйлесімі. Полиқанықпаған майлар мен антиоксиданттарға бай.",
+   desc_en:"Blend of avocado and ghee with lime and parsley. Rich in polyunsaturated fats and natural antioxidants.",
+   price:"3 990",
+   photo:"https://static.tildacdn.com/stor3038-3830-4234-a661-343435393333/44659488.jpg",
+   kbju:{cal:"418",p:"1",f:"43",c:"3"},
+   weight:"160 гр",
+   ing:"авокадо, масло гхи, лайм, петрушка, соль гималайская",
+   tags:["Без лактозы","Без глютена","Кето","Веган"]},
+  {cat:"Намазки",cat_kz:"Жағындылар",cat_en:"Spreads",
+   name:"Кето-паштет Casserole индейка с вяленными помидорами 80 гр",
+   name_kz:"Casserole кето-паштеті кептірілген қызанақпен индейка 80 гр",
+   name_en:"Casserole Keto Pâté Turkey with Sun-Dried Tomatoes 80g",
+   desc:"Кето-паштет из натуральных ингредиентов с добавлением костного бульона, масла гхи и вяленых томатов. Изысканный вкус без лактозы и глютена.",
+   desc_kz:"Сүйек сорпасы, гхи майы және кептірілген қызанақ қосылған табиғи ингредиенттерден жасалған кето-паштет.",
+   desc_en:"Keto pâté from natural ingredients with bone broth, ghee and sun-dried tomatoes. Exquisite flavor, lactose and gluten free.",
+   price:"2 300",
+   photo:"https://static.tildacdn.com/stor3562-3666-4739-b762-613833356461/21680396.jpg",
+   kbju:{cal:"",p:"",f:"",c:""},
+   weight:"80 гр",
+   ing:"грудинка индейки, масло гхи, костный бульон, томаты вяленые, соль гималайская",
+   tags:["Без лактозы","Без глютена","Кето"]},
+  {cat:"Намазки",cat_kz:"Жағындылар",cat_en:"Spreads",
+   name:"Кето-паштет Casserole индейка с вяленными помидорами 140 гр",
+   name_kz:"Casserole кето-паштеті кептірілген қызанақпен индейка 140 гр",
+   name_en:"Casserole Keto Pâté Turkey with Sun-Dried Tomatoes 140g",
+   desc:"Кето-паштет из натуральных ингредиентов с добавлением костного бульона, масла гхи и вяленых томатов. Изысканный вкус без лактозы и глютена.",
+   desc_kz:"Сүйек сорпасы, гхи майы және кептірілген қызанақ қосылған табиғи ингредиенттерден жасалған кето-паштет.",
+   desc_en:"Keto pâté from natural ingredients with bone broth, ghee and sun-dried tomatoes. Exquisite flavor, lactose and gluten free.",
+   price:"2 900",
+   photo:"https://static.tildacdn.com/stor6137-3262-4163-a532-643132323165/27073052.jpg",
+   kbju:{cal:"",p:"",f:"",c:""},
+   weight:"140 гр",
+   ing:"грудинка индейки, масло гхи, костный бульон, томаты вяленые, соль гималайская",
+   tags:["Без лактозы","Без глютена","Кето"]}];
 
 const CATS = [...new Set(PRODUCTS.map(function(p){ return p && p.cat; }))].filter(function(c){ return c && c !== "undefined"; });
 
@@ -1650,8 +1887,8 @@ function renderHero() {
 
 function renderTabs() {
   var t = (TRANSLATIONS[CURRENT_LANG]||TRANSLATIONS.RU);
-  var _catEN = {"Супы":"Soups","Фаст-фуд":"Fast Food","Гарниры":"Sides","Десерты":"Desserts","Продукция":"Products","Ферментированная продукция":"Fermented Products","Мясная продукция":"Meat Products"};
-  var _catKZ = {"Супы":"Сорпалар","Фаст-фуд":"Фастфуд","Гарниры":"Гарнирлер","Десерты":"Десерттер","Продукция":"Өнімдер","Ферментированная продукция":"Ферментацияланған өнімдер","Мясная продукция":"Ет өнімдері"};
+  var _catEN = {"Супы":"Soups","Фаст-фуд":"Fast Food","Гарниры":"Sides","Десерты":"Desserts","Продукция":"Products","Ферментированная продукция":"Fermented Products","Мясная продукция":"Meat Products","Намазки":"Spreads"};
+  var _catKZ = {"Супы":"Сорпалар","Фаст-фуд":"Фастфуд","Гарниры":"Гарнирлер","Десерты":"Десерттер","Продукция":"Өнімдер","Ферментированная продукция":"Ферментацияланған өнімдер","Мясная продукция":"Ет өнімдері","Намазки":"Жағындылар"};
   var html = "<button class=\"tab-btn active\" data-cat=\"all\" onclick=\"filterCat('all',this)\">" + (t.cat_all||"Все") + "</button>";
   html += CATS.filter(function(c){ return c && c !== "undefined"; }).map(function(c) {
     return "<button class=\"tab-btn\" data-cat=\"" + c + "\" onclick=\"filterCat('" + c + "',this)\">" + (ICONS[c] || "") + " " + (CURRENT_LANG==="EN"&&_catEN[c]?_catEN[c]:CURRENT_LANG==="KZ"&&_catKZ[c]?_catKZ[c]:c) + "</button>";
@@ -1844,14 +2081,20 @@ function sendEmail(subject, data) {
       access_key: "41adab1e-5b51-43aa-8e1f-bda8a41f347a",
       subject: subject,
       from_name: "Casserole Website",
+      replyto: "casserolekz@gmail.com",
       message: body
     })
-  }).catch(function(){});
+  }).then(function(r){ return r.json(); })
+    .then(function(d){ console.log("[Casserole] Form:", d.success, d.message); })
+    .catch(function(err){ console.error("[Casserole] Form error:", err); });
 }
 
 function formSuccess(btn) {
   var formData = collectFormData(btn);
-  var subject = btn.closest(".form-card") ? "Заявка на консультацию — Casserole" : "Заявка партнёра — Casserole";
+  var t = (TRANSLATIONS[CURRENT_LANG]||TRANSLATIONS.RU);
+  var subject = btn.closest(".form-card") ? 
+    (CURRENT_LANG==="EN"?"Consultation request — Casserole":CURRENT_LANG==="KZ"?"Кеңес сұрауы — Casserole":"Заявка на консультацию — Casserole") : 
+    (CURRENT_LANG==="EN"?"Partner application — Casserole":CURRENT_LANG==="KZ"?"Серіктес өтінімі — Casserole":"Заявка партнёра — Casserole");
   sendEmail(subject, formData);
   var orig = btn.textContent;
   btn.textContent = "✓ Заявка отправлена!";
@@ -1902,4 +2145,6 @@ function carouselGo(idx) {
 }
 </script>
 </body>
-</html>
+</html
+
+>
